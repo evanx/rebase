@@ -6,11 +6,11 @@ Client-directed redis query specified in JSON issued over HTTP.
 
 ```yaml
 
-  params: 
-  - name: index
-    type: integer
-  - name: section
-    type: string
+params: 
+- name: index
+  type: integer
+- name: section
+  type: string
 
 commands:
 - command: get  
@@ -28,8 +28,10 @@ commands:
     key: article:{id}
     type: json
   
-  command: hmget
+- command: hmget
   fields: 
   - id
-  - name 
+  - name
+  
+  
 ```
