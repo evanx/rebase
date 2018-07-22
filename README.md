@@ -1,4 +1,4 @@
-# redis-client-query
+# redis-web-query
 
 Client-directed redis query specified in JSON issued over HTTP.
 
