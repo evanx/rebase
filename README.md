@@ -1,8 +1,44 @@
-# redis-web-query
+# remake
+
+
+## Design ideas 
+
+### Example routes
+
+#### News application
+
+/article
+  POST - create
+  GET - query/find
+
+/article/:id
+  GET - retrieve
+  PUT - update/replace
+  PATCH - update/modify
+  DELETE
+
+/article/:id/publish
+
+#### Retail application
+
+#### Cloud application 
+
+/services {name, }
+/services/:id/tasks { gitrepo, env, count } 
+
+
+### Access control
+
+policy
+View article
+Create article
+Delete article
+
+### client-directed query 
 
 Client-directed redis query specified in JSON issued over HTTP.
 
-# Design notes
+#### Design notes
 
 ```yaml
 
