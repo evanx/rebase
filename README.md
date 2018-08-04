@@ -8,14 +8,14 @@
 #### News application
 
 /article
-  POST - create
-  GET - query/find
+  - POST - create
+  - GET - query/find
 
 /article/:id
-  GET - retrieve
-  PUT - update/replace
-  PATCH - update/modify
-  DELETE
+  - GET - retrieve
+  - PUT - update/replace
+  - PATCH - update/modify
+  - DELETE
 
 /article/:id/publish
 
@@ -24,15 +24,17 @@
 #### Cloud application 
 
 /services {name, }
+
 /services/:id/tasks { gitrepo, env, count } 
 
 
 ### Access control
 
-policy
-View article
-Create article
-Delete article
+/articles
+- Create article
+- View article
+- Delete article
+- Publish article
 
 ### client-directed query 
 
