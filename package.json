@@ -1,20 +1,26 @@
 {
-  "name": "redis-web-query",
+  "name": "remake",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "node example.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evanx/redis-client-query.git"
+    "url": "git+https://github.com/evanx/remake.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/evanx/redis-client-query/issues"
+    "url": "https://github.com/evanx/remake/issues"
   },
-  "homepage": "https://github.com/evanx/redis-client-query#readme"
+  "homepage": "https://github.com/evanx/remake#readme",
+  "dependencies": {
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "multi-exec-async": "^0.2.0",
+    "redis": "^2.8.0"
+  }
 }
