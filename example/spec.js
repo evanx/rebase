@@ -6,7 +6,6 @@ module.exports = {
     },
     http: {
         port: 8888,
-
     },
     responseTimeoutSeconds: 3,
     popTimeoutSeconds: 4,

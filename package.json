@@ -2,9 +2,9 @@
   "name": "remake",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.js",
+  "main": "lib/proxy.js",
   "scripts": {
-    "test": "node example.js"
+    "test": "node example/main.js"
   },
   "repository": {
     "type": "git",

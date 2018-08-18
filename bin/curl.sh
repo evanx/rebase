@@ -1,1 +1,1 @@
-curl localhost:8888/abc?q=123
+curl localhost:8888/hello
