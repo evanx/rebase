@@ -1,11 +1,10 @@
-const service = require('../../lib/service.js') 
-
-module.exports = service(async ({logger, req, client}) => {
+module.exports = async ({ logger, client, req }) => {
     return {
         status: 200,
         contentType: 'application/json',
         body: {
-            hello: 'world'
+            hello: 'world',
+            req
         }
     }
-})
+}
