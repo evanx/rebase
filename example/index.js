@@ -1,3 +1,4 @@
+
 module.exports = {
     spec: {
         type: 'http-server',
@@ -28,9 +29,14 @@ module.exports = {
             }
         },
         {
+            path: '/users/:id',
+            method: 'get',
+            handler: require('../lib/handlers/get.js')({ table: 'user' })
+        },
+        {
             path: '/users',
             method: 'post',
-            handler: require('./handlers/users/create.js')({table: 'user'})
+            handler: require('../lib/handlers/create.js')({table: 'user'})
         },
     ],
     async router(ctx) {
