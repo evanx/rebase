@@ -1,1 +1,3 @@
-require('../lib/serve.js')(require('./index.js'))
+require('../lib/serve.js')(
+    require('./index.js')
+)

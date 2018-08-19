@@ -18,11 +18,14 @@
   },
   "homepage": "https://github.com/evanx/remake#readme",
   "dependencies": {
+    "array-flatten": "^2.1.1",
     "brpoplpush-async": "^1.0.0",
     "clc": "^1.0.2",
     "koa": "^2.5.2",
     "koa-bodyparser": "^4.2.1",
     "multi-exec-async": "^0.2.0",
-    "redis": "^2.8.0"
+    "node-uuid": "^1.4.8",
+    "redis": "^2.8.0",
+    "uuid": "^3.3.2"
   }
 }

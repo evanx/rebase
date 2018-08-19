@@ -1,14 +1,22 @@
 module.exports = {
     spec: {
+        type: 'http-server',
+        version: 1,
         redis: {
             prefix: 'mk:',
         },
         responseTimeoutSeconds: 3,
         popTimeoutSeconds: 4,
     },
+    services: [
+        {
+            id: 'users'
+        }
+    ],
     routes: [
         {
-            path: "/allo",
+            path: '/allo',
+            method: 'get',
             handler({req}) {
                 return {
                     status: 200,
@@ -18,6 +26,11 @@ module.exports = {
                     }
                 }
             }
+        },
+        {
+            path: '/users',
+            method: 'post',
+            handler: require('./handlers/users/create.js')({table: 'user'})
         },
     ],
     async router(ctx) {
@@ -32,7 +45,7 @@ module.exports = {
                 }
             }
         }
-        return require('./services/home.js')(ctx)
+        return require('./handlers/home.js')(ctx)
     },
     shutdown({ spec, exit, error }) {
         exit()
