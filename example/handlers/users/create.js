@@ -8,7 +8,10 @@ module.exports = options => {
             req.body.id = uuidV4()
         }
         await rtx(client, tx => {
-            tx.hmset(`${options.table}:${req.body.id}:h`, Array_flat(Object.entries(req.body)))
+            tx.hmset(
+                `${options.table}:${req.body.id}:h`, 
+                Array_flat(Object.entries(req.body))
+            )
         })
         return {
             status: 200,
