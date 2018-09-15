@@ -1,3 +1,4 @@
+const httpHandlers = require('../lib/handlers/index.js')
 
 module.exports = {
     spec: {
@@ -31,12 +32,12 @@ module.exports = {
         {
             path: '/users/:id',
             method: 'get',
-            handler: require('../lib/handlers/get.js')({ table: 'user' })
+            handler: httpHandlers.get({ table: 'user' })
         },
         {
             path: '/users',
             method: 'post',
-            handler: require('../lib/handlers/create.js')({table: 'user'})
+            handler: httpHandlers.create({ table: 'user' })
         },
     ],
     async router(ctx) {
