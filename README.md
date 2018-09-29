@@ -1,57 +1,69 @@
 # rebase
 
+## Goal
 
-## Design ideas 
+Opinionated Redis-based backend framework supporting:
+
+-  secondary indexing
+-  querying (including client directed queries)
+-  users and authentication
+-  role-based authorisation
+-  easy serverless deployment
+-  centralised logging for easy debugging
+-  production-ready monitoring and metrics
+
+## Design ideas
 
 ### Example routes
 
 #### News application
 
 /article
-  - POST - create
-  - GET - query/find
+
+-  POST - create
+-  GET - query/find
 
 /article/:id
-  - GET - retrieve
-  - PUT - update/replace
-  - PATCH - update/modify
-  - DELETE
+
+-  GET - retrieve
+-  PUT - update/replace
+-  PATCH - update/modify
+-  DELETE
 
 /article/:id/publish
 
 #### Retail application
 
-#### Cloud application 
+#### Cloud application
 
 /services {name, }
 
-/services/:id/tasks { gitrepo, env, count } 
-
+/services/:id/tasks { gitrepo, env, count }
 
 ### Access control
 
 /articles
-- Create article
-- View article
-- Delete article
-- Publish article
 
-### client-directed query 
+-  Create article
+-  View article
+-  Delete article
+-  Publish article
+
+### client-directed query
 
 Client-directed redis query specified in JSON issued over HTTP.
 
 #### Design notes
 
 ```yaml
-
-params: 
+params:
 - name: index
   type: integer
 - name: section
   type: string
 
 commands:
-- command: get  
+- command: get
   key: article:{index}
   type: string
   set: name
@@ -65,11 +77,11 @@ commands:
     item: {articles}
     key: article:{id}
     type: json
-  
+
 - command: hmget
-  fields: 
+  fields:
   - id
   - name
-  
-  
+
+
 ```
